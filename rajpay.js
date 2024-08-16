@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const rajPbtn = document.getElementById('rajPbtn');
-    let popupBox;
+    let popBx;
 
     function loadPopup() {
         fetch('./paymentTemp.html')
@@ -28,39 +28,38 @@ document.addEventListener('DOMContentLoaded', function () {
                 });                
 
                 document.body.appendChild(tempDiv.firstChild);
-                popupBox = document.getElementById('popupBox');
+                popBx = document.getElementById('popBx');
                 
                 // Add event listeners
-                const closeBtn = document.getElementById('closeBtn');
-                closeBtn.addEventListener('click', hidePopup);
+                const payClsBtn = document.getElementById('payClsBtn');
+                payClsBtn.addEventListener('click', hidePopup);
                 window.addEventListener('click', outsideClick);
 
-                // Show the popup immediately after loading
                 showPopup();
             });
     }
 
     function showPopup() {
-        if (popupBox) {
-            popupBox.style.display = 'flex';
+        if (popBx) {
+            popBx.style.display = 'flex';
         }
     }
 
     function hidePopup() {
-        if (popupBox) {
-            popupBox.style.display = 'none';
+        if (popBx) {
+            popBx.style.display = 'none';
         }
     }
 
     function outsideClick(event) {
-        if (popupBox && event.target === popupBox) {
+        if (popBx && event.target === popBx) {
             hidePopup();
         }
     }
 
     function handleRajPbtnClick(event) {
         event.preventDefault(); // Prevent any default button behavior
-        if (!popupBox) {
+        if (!popBx) {
             loadPopup();
         } else {
             showPopup();
