@@ -66,9 +66,9 @@ span.popCbtn:hover {
 }
 
 h3.popHdr3 {
-    margin: 0;
-    font-size: 16px !important;
-    color: #444;
+    margin: 0 !important;
+    font-size: 18px !important;
+    color: #444 !important;
 }
 
 span.proPrc {
@@ -81,11 +81,10 @@ div.payMd {
     margin-top: 20px;
 }
 
-h3.popHdr3 {
-    margin: 0;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 10px;
+h3.poHdrM3 {
+    margin: 0 !important;
+    font-size: 16px !important;
+    color: #555 !important;
 }
 
 span.payMtd.PayBtn {
